@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Assignment 4: Semantic Tableau Revisited</title>
+  </head>
+
+  <body>
+    <h1>Assignment 4: Semantic Tableau Revisited</h1>
+    <hr>
+    <p>Due Monday, November 7 at 11:59 PM</p>
+
+    <h2>Goals for This Assignment</h2>
+    <p>By the time you have completed this work, you should be able to:</p>
+    <ul>
+      <li>Implement a basic Boolean evaluator in Prolog</li>
+      <li>Implement a basic SAT solver in Prolog</li>
+    </ul>
+    <b>Provided files:</b>
+    <ul>
+      <li><a href="boolean_evaluator.pl"><code>boolean_evaluator.pl</code></a></li>
+      <li><a href="sat_solver.pl"><code>sat_solver.pl</code></a></li>
+      <li><a href="assign4_questions.txt"><code>assign4_questions.txt</code></a></li>
+      <li><a href="collaborators.txt"><code>collaborators.txt</code></a></li>
+    </ul>
+
+    <hr>
+    <h1>Step-by-Step Instructions</h1>
+    <h2>Step 1: Implement a Boolean Expression Evaluator in Prolog</h2>
+    <p>
+      Download <a href="boolean_evaluator.pl"><code>boolean_evaluator.pl</code></a>.
+      You will need to implement a recursive evaluator of Boolean expressions in this file, much like the evaluator you implemented for <a href="../assign_1">Assignment 1</a>.
+      This will be implemented via a procedure (that is, a combination of facts and rules which have the same name) named <code>eval</code>.
+      Note that the representation of the AST has been slightly changed, corresponding to a more idiomatic Prolog representation.
+      The comments in the file provide more details.
+    </p>
+
+    <h2>Step 2: Implement a SAT Solver in Prolog</h2>
+    <p>
+      Download <a href="sat_solver.pl"><code>sat_solver.pl</code></a>.
+      You will need to write a procedure (that is, a combination of facts and rules which have the same name) named <code>isTrue</code> which determines if a given Boolean formula is true.
+      This formula has a very similar AST as the one from the SAT solver you implemented for <a href="../assign_1">Assignment 1</a>, with mostly just changes to make the representation a little more idiomatic to Prolog.
+      However, there is one key difference: instead of variables in the formula being represented by atoms (or symbols for Racket), here we represent the variables using Prolog variables (i.e., logical variables).
+      This effectively allows us to &ldquo;modify&rdquo; the formula in-place as we learn information about it (i.e., which variables need to be <code>true</code> or <code>false</code>.
+    </p>
+    <p>
+      Relevant to the aforementioned representation of literals, this means the following:
+    </p>
+    <ul>
+      <li>
+        If we have a positive literal, the Prolog variable in the literal must be equal to the atom <code>true</code>.
+        That is, for a positive literal to be true, its variable must hold the value <code>true</code>.
+      </li>
+      <li>
+        If we have a negative literal, the Prolog variable in the literal must be equal to the atom <code>false</code>.
+        That is, for a negative literal to be true, its variable must hold the value <code>false</code>, because it is negated.
+      </li>
+    </ul>
+    <p>
+      The comments in the file provide further details.
+    </p>
+    
+    <h2>(OPTIONAL BONUS WORTH +15%) Step 3: Answer Reflection Questions</h2>
+    <p>
+      This may come as a bit of a surprise, but you implemented a full tableau-based SAT solver in the previous step.
+      However, the code is (hopefully!) a lot simpler than the code you wrote for <a href="../assign_1">Assignment 1</a>.
+    </p>
+    <p>
+      Download <a href="assign4_questions.txt"><code>assign4_questions.txt</code></a>.
+      There are questions in this file which ask you to reflect on your implementation, in particular with how it compares and contrasts with the implementation you wrote for <a href="../assign_1">Assignment 1</a>.
+    </p>
+
+    <h2>Step 4: Turn in Your Solution Using <a href="https://canvas.csun.edu">Canvas</a></h2>
+    <p>
+      Log into <a href="https://canvas.csun.edu">Canvas</a>, and go to the COMP 410 class.
+      Click &ldquo;Assignments&rdquo; on the left pane, then click &ldquo;Assignment 4&rdquo;.
+      From here, you need to upload the following files:
+    </p>
+    <ul>
+      <li><code>boolean_evaluator.pl</code></li>
+      <li><code>sat_solver.pl</code></li>
+      <li><code>assign4_questions.txt</code> (only if you attempted the bonus)</li>
+    </ul>
+    <p>
+      In addition, if you collaborated with anyone else, be sure to download <a href="collaborators.txt"><code>collaborators.txt</code></a> and write the names of the people you collaborated with in the file, one per line.
+      Please submit this file along with the other files.
+    </p>
+    <p>
+      You can turn in the assignment multiple times, but only the last version you submitted will be graded.
+    </p>
+  </body>
+</html>
