@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Assignment 7: Nondeterminism in Python</title>
+  </head>
+
+  <body>
+    <h1>Assignment 7: Nondeterminism in Python</h1>
+    <hr>
+    <p>Due Monday, December 18 at 11:59 PM (<b>hard deadline! - no late submissions</b>)</p>
+
+    <h2>Goals for This Assignment</h2>
+    <p>By the time you have completed this work, you should be able to:</p>
+    <ul>
+      <li>Write grammar-based test case generators in Python</li>
+      <li>Use <code>yield</code> in Python to nondeterministally produce values</li>
+    </ul>
+    <b>Provided files:</b>
+    <ul>
+      <li><a href="arithmetic_tester.py"><code>arithmetic_tester.py</code></a></li>
+      <li><a href="collaborators.txt"><code>collaborators.txt</code></a></li>
+    </ul>
+
+    <hr>
+    <h1>Step-by-Step Instructions</h1>
+    <h2>Step 1: Implement a Basic Grammar-Based Test Case Generator in Python</h2>
+    <p>
+      Download <a href="arithmetic_tester.py"><code>arithmetic_tester.py</code></a>.
+      You will need to implement two functions in this file:
+    </p>
+    <ol>
+      <li><code>makeTest</code></li>
+      <li><code>makeTestWithNums</code></li>
+    </ol>
+    <p>
+      It is recommended to write <code>makeTest</code> first, and to make sure it's working first before moving on to <code>makeTestWithNums</code>.
+      To this end, there is a test suite provided for both procedures (that is, a test suite for the test suite generator), with <code>testMakeTest</code> and <code>testMakeTestWithNums</code>, respectively.
+      The comments in <a href="arithmetic_tester.py"><code>arithmetic_tester.py</code></a> provide further details.
+    </p>
+    <p>
+      You can implement these procedures however you wish, as long as it doesn't change how they are called.
+      You can introduce as many helper procedures as you like.
+    </p>
+
+    <h2>Step 2: Turn in Your Solution Using <a href="https://canvas.csun.edu">Canvas</a></h2>
+    <p>
+      Log into <a href="https://canvas.csun.edu">Canvas</a>, and go to the COMP 410 class.
+      Click &ldquo;Assignments&rdquo; on the left pane, then click &ldquo;Assignment 7&rdquo;.
+      From here, you need to upload the following file:
+    </p>
+    <ul>
+      <li><code>arithmetic_tester.py</code></li>
+    </ul>
+    <p>
+      In addition, if you collaborated with anyone else, be sure to download <a href="collaborators.txt"><code>collaborators.txt</code></a> and write the names of the people you collaborated with in the file, one per line.
+      Please submit this file along with the other file.
+    </p>
+    <p>
+      You can turn in the assignment multiple times, but only the last version you submitted will be graded.
+    </p>
+  </body>
+</html>
